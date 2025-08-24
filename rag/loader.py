@@ -44,7 +44,7 @@ def generate_md_chunks_from_pdf(pdf_path: str, output_dir: str = "data/chunks"):
         if "rag.pdf_primes_to_markdown" in sys.modules:
             del sys.modules["rag.pdf_primes_to_markdown"]
 
-        from rag.xlsx_primes_to_markdown import save_chunks_as_files
+        from preprocess.xlsx_primes_to_markdown import save_chunks_as_files
         logger.info(f"🔄 Génération des fichiers .md depuis {pdf_path}")
         save_chunks_as_files(pdf_path, output_dir=output_dir)
 
